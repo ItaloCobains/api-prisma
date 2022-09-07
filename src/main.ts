@@ -33,6 +33,6 @@ async function bootstrap() {
   app.useGlobalInterceptors(new DatabaseInterceptor());
   app.useGlobalInterceptors(new UnauthorizedInterceptor());
   app.useGlobalInterceptors(new NotFoundInterceptor());
-  await app.listen(3000 || process.env.PORT);
+  await app.listen(process.env.PORT || 3000);
 }
 bootstrap();
